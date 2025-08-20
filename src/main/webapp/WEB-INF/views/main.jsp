@@ -6,13 +6,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>펫샵 - 사랑스러운 반려동물과 함께</title>
-<link rel="stylesheet" href="styles.css">
+<!-- <link rel="stylesheet" href="styles.css">
 <link
 	href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
 	rel="stylesheet">
 <link
 	href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
-	rel="stylesheet">
+	rel="stylesheet"> -->
 </head>
 <script type="text/javascript">
 const petImages = [    {
@@ -36,13 +36,13 @@ const petImages = [    {
 </script>
 <style>
 /* Google Fonts */
-@import
+/* @import
 	url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 @import
 	url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css')
 	;
-
+ */
 * {
 	margin: 0;
 	padding: 0;
@@ -355,6 +355,7 @@ body {
 	color: white;
 	margin-bottom: 1.5rem;
 	line-height: 1.2;
+	text-shadow: 3px 3px 8px black;
 }
 
 .main-image-description {
@@ -363,6 +364,7 @@ body {
 	margin-bottom: 2rem;
 	line-height: 1.6;
 	opacity: 0.9;
+	text-shadow: 3px 3px 8px black;
 }
 
 .main-image-buttons {
@@ -398,6 +400,7 @@ body {
 	white-space: nowrap;
 	font-weight: 500;
 	transition: all 0.2s;
+	
 }
 
 .secondary-btn:hover {
@@ -407,7 +410,7 @@ body {
 .product-section {
 	width: 100%;
 	background: white;
-	padding: 5rem 0;
+	padding: 4rem 0;
 }
 
 .product-container {
@@ -483,6 +486,26 @@ body {
 	}
 }
 
+.footer {
+	width: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	background-color: rgba(211, 211, 211, 0.7); /* 0.7 = 70% 불투명 */
+	backdrop-filter: blur(8px);
+	/* border-bottom: 1px solid rgba(229, 231, 235, 0.5); */
+	/* position: fixed; */ 
+	/* top: 0; */
+	/* z-index: 50; */
+}
+
+.footer-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 1rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 @media ( max-width : 767px) {
 	.desktop-nav {
 		display: none;
@@ -514,30 +537,10 @@ body {
 ```
 </style>
 <body>
-	<header class="header">
-		<div class="header-container">
-			<div class="logo"><img alt="" src="resources/독캣배송_아이콘만.png" width="100px"> <!-- 사이트 이름 --></div>
-			<div><img alt="" src="resources/독캣배송_폰트만.png" width="300px"></div>
-			<nav class="desktop-nav">
-				<!-- <a href="#" class="nav-link">주요</a> --> 
-				<a href="#" class="nav-link" onclick="window.location='${path}/shop_main'">SHOP</a>
-				<a href="#" class="nav-link" onclick="window.location='${path}/yak'">COMMUNITY</a>
-				<a href="#" class="nav-link" onclick="window.location='${path}/join'">회원가입</a>
-				<button class="contact-btn" onclick="window.location='${path}/login'">로그인</button>
-			</nav>
-			<button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-				<i class="ri-menu-line" id="menu-icon"></i>
-			</button>
-		</div>
-		<div class="mobile-menu" id="mobile-menu">
-			<nav class="mobile-nav">
-				<a href="#" class="mobile-nav-link">주요</a> <a href="#"
-					class="mobile-nav-link">회사소개</a> <a href="#"
-					class="mobile-nav-link">메뉴</a>
-				<button class="mobile-contact-btn">연락</button>
-			</nav>
-		</div>
-	</header>
+	<!-- 헤더 시작 -->
+		<%@ include file="header.jsp" %>
+	<!-- 헤더 끝 -->
+	
 	<section class="hero-section">
 		<!-- <div class="hero-container">
 			<div class="hero-content">
@@ -555,17 +558,17 @@ body {
     <div class="carousel-inner">
       <!-- 첫 번째 이미지 -->
       <div class="carousel-item active" >
-        <img height="600px" src="https://readdy.ai/api/search-image?query=Adorable golden retriever puppy sitting in a modern pet store, bright clean background, professional pet photography, warm lighting, happy expression, high quality commercial photo&width=1920&height=1080&seq=dog-1&orientation=landscape" class="d-block w-100" alt="강아지 이미지1" />
+        <img height="600px" src="resources/메인_강아지1.jpg" class="d-block w-100" alt="강아지 이미지1" />
         <div class="carousel-caption d-none d-md-block text-start">
           <br>
 			<div class="main-image-content">
 				<div class="main-image-text">
-					<h2 class="main-image-title">사랑스러운 반려동물과 함께</h2>
+					<h2 class="main-image-title">사랑스러운 <br>반려동물과 함께</h2>
 					<p class="main-image-description">건강하고 행복한 반려동물을 위한 프리미엄 용품과
-						서비스를 제공합니다.</p>
+						<br>서비스를 제공합니다.</p>
 					<div class="main-image-buttons">
-						<button class="primary-btn">용품 둘러보기</button>
-						<button class="secondary-btn">서비스 보기</button>
+						<button class="primary-btn">SHOP</button>
+						<button class="secondary-btn">COMM</button>
 					</div>
 				</div>
 			</div>
@@ -574,17 +577,17 @@ body {
       
       <!-- 두 번째 이미지 -->
       <div class="carousel-item">
-        <img height="600px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDv7tayKQ7I2-mVDp03Cl-dVdzK3aA8vU5Mw&s" class="d-block w-100" alt="이미지 2" />
+        <img height="600px" src="resources/메인_고양이1.jpg" class="d-block w-100" alt="이미지 2" />
         <div class="carousel-caption d-none d-md-block text-start">
           <br>
 			<div class="main-image-content">
 				<div class="main-image-text">
-					<h2 class="main-image-title">사랑스러운 반려동물과 함께</h2>
+					<h2 class="main-image-title">사랑스러운 <br>반려동물과 함께</h2>
 					<p class="main-image-description">건강하고 행복한 반려동물을 위한 프리미엄 용품과
-						서비스를 제공합니다.</p>
+						<br>서비스를 제공합니다.</p>
 					<div class="main-image-buttons">
-						<button class="primary-btn">용품 둘러보기</button>
-						<button class="secondary-btn">서비스 보기</button>
+						<button class="primary-btn">SHOP</button>
+						<button class="secondary-btn">COMM</button>
 					</div>
 				</div>
 			</div>
@@ -593,23 +596,44 @@ body {
 
       <!-- 세 번째 이미지 -->
       <div class="carousel-item">
-        <img height="600px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPTlBiRZD6CsNzcgywBysmDeJBj2lsY7hCcg&s" class="d-block w-100" alt="이미지 3" />
+        <img height="600px" src="resources/메인_같이.png" class="d-block w-100" alt="이미지 3" />
         <div class="carousel-caption d-none d-md-block text-start">
           <br>
 			<div class="main-image-content">
 				<div class="main-image-text">
-					<h2 class="main-image-title">사랑스러운 반려동물과 함께</h2>
+					<h2 class="main-image-title">사랑스러운 <br>반려동물과 함께</h2>
 					<p class="main-image-description">건강하고 행복한 반려동물을 위한 프리미엄 용품과
-						서비스를 제공합니다.</p>
+						<br>서비스를 제공합니다.</p>
 					<div class="main-image-buttons">
-						<button class="primary-btn">용품 둘러보기</button>
-						<button class="secondary-btn">서비스 보기</button>
+						<button class="primary-btn">SHOP</button>
+						<button class="secondary-btn">COMM</button>
+					</div>
+				</div>
+			</div>
+        </div>
+      </div>
+      
+      <!-- 네 번째 이미지 -->
+      <div class="carousel-item">
+        <img height="600px" src="resources/메인_커뮤1.png" class="d-block w-100" alt="이미지 4" />
+        <div class="carousel-caption d-none d-md-block text-start">
+          <br>
+			<div class="main-image-content">
+				<div class="main-image-text">
+					<h2 class="main-image-title">사랑스러운 <br>반려동물과 함께</h2>
+					<p class="main-image-description">건강하고 행복한 반려동물을 위한 프리미엄 용품과
+						<br>서비스를 제공합니다.</p>
+					<div class="main-image-buttons">
+						<button class="primary-btn">SHOP</button>
+						<button class="secondary-btn">COMM</button>
 					</div>
 				</div>
 			</div>
         </div>
       </div>
     </div>
+    
+    
 
     <!-- 캐러셀 네비게이션 -->
     <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
@@ -631,32 +655,29 @@ body {
 				<div class="product-card">
 					<div class="product-image">
 						<img
-							src="resources/shutterstock_372206791.jpg"
+							src="resources/메인_상품1.jpg"
 							alt="">
 					</div>
 					<h3 class="product-card-title">상품1</h3>
-					<p class="product-card-description">반려동물을 키우는 가족들과 소통하고 정보를
-						공유하는 따뜻한 공간입니다.</p>
+					<p class="product-card-description">카테고리<br>가격</p>
 				</div>
 				<div class="product-card">
 					<div class="product-image">
 						<img
-							src="https://readdy.ai/api/search-image?query=Modern pet store interior with organized shelves of pet food, toys, and accessories, clean bright lighting, professional retail environment, colorful pet products display&width=300&height=200&seq=store1&orientation=landscape"
+							src="resources/메인_상품2.png"
 							alt="스토어">
 					</div>
 					<h3 class="product-card-title">상품2</h3>
-					<p class="product-card-description">반려동물을 위한 최고 품질의 사료, 용품,
-						장난감을 한 곳에서 만나보세요.</p>
+					<p class="product-card-description">카테고리<br>가격</p>
 				</div>
 				<div class="product-card">
 					<div class="product-image">
 						<img
-							src="https://readdy.ai/api/search-image?query=Professional veterinarian caring for cute puppy and kitten, modern veterinary clinic interior, gentle healthcare atmosphere, clean medical environment, caring professional service&width=300&height=200&seq=care1&orientation=landscape"
+							src="resources/메인_상품3.jpg"
 							alt="케어 서비스">
 					</div>
 					<h3 class="product-card-title">상품3</h3>
-					<p class="product-card-description">전문 수의사와 케어 전문가들이 제공하는 건강하고
-						행복한 반려동물 관리 서비스입니다.</p>
+					<p class="product-card-description">카테고리<br>가격</p>
 				</div>
 			</div>
 		</div>
@@ -669,13 +690,39 @@ body {
 				<div class="product-card">
 					<div class="product-image">
 						<img
-							src="https://readdy.ai/api/search-image?query=Happy pet owners community gathering with dogs and cats, people smiling and interacting, warm social atmosphere, modern pet-friendly environment, natural lighting, welcoming community space&width=300&height=200&seq=community1&orientation=landscape"
+							src="resources/메인_상품4.png"
 							alt="커뮤니티">
 					</div>
-					<h3 class="product-card-title">커뮤니티</h3>
-					<p class="product-card-description">반려동물을 키우는 가족들과 소통하고 정보를
-						공유하는 따뜻한 공간입니다.</p>
+					<h3 class="product-card-title">상품4</h3>
+					<p class="product-card-description">카테고리<br>가격</p>
 				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img
+							src="resources/메인_상품5.png"
+							alt="스토어">
+					</div>
+					<h3 class="product-card-title">상품5</h3>
+					<p class="product-card-description">카테고리<br>가격</p>
+				</div>
+				<div class="product-card">
+					<div class="product-image">
+						<img
+							src="resources/메인_상품6.jpg"
+							alt="케어 서비스">
+					</div>
+					<h3 class="product-card-title">상품6</h3>
+					<p class="product-card-description">카테고리<br>가격</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="product-section">
+		<div class="product-container">
+			<h2 class="product-title">서비스</h2>
+			<div class="product-grid">
+				
 				<div class="product-card">
 					<div class="product-image">
 						<img
@@ -686,6 +733,18 @@ body {
 					<p class="product-card-description">반려동물을 위한 최고 품질의 사료, 용품,
 						장난감을 한 곳에서 만나보세요.</p>
 				</div>
+				
+				<div class="product-card">
+					<div class="product-image">
+						<img
+							src="https://readdy.ai/api/search-image?query=Happy pet owners community gathering with dogs and cats, people smiling and interacting, warm social atmosphere, modern pet-friendly environment, natural lighting, welcoming community space&width=300&height=200&seq=community1&orientation=landscape"
+							alt="커뮤니티">
+					</div>
+					<h3 class="product-card-title">커뮤니티</h3>
+					<p class="product-card-description">반려동물을 키우는 가족들과 소통하고 정보를
+						공유하는 따뜻한 공간입니다.</p>
+				</div>
+				
 				<div class="product-card">
 					<div class="product-image">
 						<img
@@ -700,48 +759,9 @@ body {
 		</div>
 	</section>
 	
-	<section class="product-section">
-		<div class="product-container">
-			<h2 class="product-title">서비스</h2>
-			<div class="product-grid">
-				<div class="product-card">
-					<div class="product-image">
-						<img
-							src="https://readdy.ai/api/search-image?query=Happy pet owners community gathering with dogs and cats, people smiling and interacting, warm social atmosphere, modern pet-friendly environment, natural lighting, welcoming community space&width=300&height=200&seq=community1&orientation=landscape"
-							alt="커뮤니티">
-					</div>
-					<h3 class="product-card-title">커뮤니티</h3>
-					<p class="product-card-description">반려동물을 키우는 가족들과 소통하고 정보를
-						공유하는 따뜻한 공간입니다.</p>
-				</div>
-				<div class="product-card">
-					<div class="product-image">
-						<img
-							src="https://readdy.ai/api/search-image?query=Modern pet store interior with organized shelves of pet food, toys, and accessories, clean bright lighting, professional retail environment, colorful pet products display&width=300&height=200&seq=store1&orientation=landscape"
-							alt="스토어">
-					</div>
-					<h3 class="product-card-title">스토어</h3>
-					<p class="product-card-description">반려동물을 위한 최고 품질의 사료, 용품,
-						장난감을 한 곳에서 만나보세요.</p>
-				</div>
-				<div class="product-card">
-					<div class="product-image">
-						<img
-							src="https://readdy.ai/api/search-image?query=Professional veterinarian caring for cute puppy and kitten, modern veterinary clinic interior, gentle healthcare atmosphere, clean medical environment, caring professional service&width=300&height=200&seq=care1&orientation=landscape"
-							alt="케어 서비스">
-					</div>
-					<h3 class="product-card-title">케어 서비스</h3>
-					<p class="product-card-description">전문 수의사와 케어 전문가들이 제공하는 건강하고
-						행복한 반려동물 관리 서비스입니다.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<footer>
-		<div style="background-color:green">
-			<h1>FOOTER</h1>
-		</div>
-	</footer>
+	<!-- 푸터 시작 -->
+		<%@ include file="footer.jsp" %>
+	<!-- 푸터 끝 -->
 	<script src="script.js"></script>
 </body>
 </html>

@@ -66,7 +66,7 @@
 			<h1>상품 메인페이지</h1>
 	<table>
 		<tr>
-			<td><a href="${path}/shop_detail"><img alt="" src="resources/상품메인.png" width="1000px"></a></td>
+			<td><a href="${path}/board_detail"><img alt="" src="resources/게시판상세.png" width="1000px"></a></td>
 		</tr>
 	</table>
 		

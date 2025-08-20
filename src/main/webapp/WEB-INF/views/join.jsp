@@ -84,42 +84,42 @@
 									<tr>
 										<th> * 아이디</th>
 										<td>
-											<input type="text" class="input" name="user_id" size="20" placeholder="공백없이 20자 이내로 작성" required autofocus>
+											<input type="text" class="input" name="user_id" size="20" placeholder="공백없이 20자 이내로 작성"  autofocus>
 											<input type="button" name="dubchk" value="중복확인" style="margin-left: 10px" onclick="confirmid()">
 										</td>
 									</tr>
 									<tr>
 										<th> * 비밀번호</th>
 										<td>
-											<input type="password" class="input" name="user_password" size="20" placeholder="공백없이 20자 이내로 작성" required>
+											<input type="password" class="input" name="user_password" size="20" placeholder="공백없이 20자 이내로 작성" >
 										</td>
 									</tr>
 									<tr>
 										<th> * 비밀번호(확인)</th>
 										<td>
-											<input type="password" class="input" name="re_pw" size="20" placeholder="비밀번호 확인" required>
+											<input type="password" class="input" name="re_pw" size="20" placeholder="비밀번호 확인" >
 										</td>
 									</tr>
 									<tr>
 										<th> * 이름</th>
 										<td>
-											<input type="text" class="input" name="user_name" size="20" placeholder="이름 작성" required>
+											<input type="text" class="input" name="user_name" size="20" placeholder="이름 작성" >
 										</td>
 									</tr>
 									<tr>
 										<th> * 생년월일</th>
 										<td>
-											<input type="date" class="input" name="user_birthday" size="8" placeholder="-없이 생년월일 8자리" required>
+											<input type="date" class="input" name="user_birthday" size="8" placeholder="-없이 생년월일 8자리" >
 										</td>
 									</tr>
 									<tr>
 										<th> * 주소</th>
 										<td>
-											<input type="text" class="input" id="add1" name="user_address1" size="5" placeholder="우편번호" required>
+											<input type="text" class="input" id="add1" name="user_address1" size="5" placeholder="우편번호" >
 											<input type="button" name="dubchk" value="우편번호 검색" style="margin-left: 10px" onclick="postget()">
 											<br>
-											<input type="text" class="input" id="add2" name="user_address2" size="10" placeholder="주소작성" required>
-											<input type="text" class="input" id="add3" name="user_address3" size="10" placeholder="상세주소" required>
+											<input type="text" class="input" id="add2" name="user_address2" size="10" placeholder="주소작성" >
+											<input type="text" class="input" id="add3" name="user_address3" size="10" placeholder="상세주소" >
 										</td>
 									</tr>
 									<tr>
@@ -133,8 +133,8 @@
 									<tr>
 										<th> * 이메일</th>
 										<td>
-											<input type="text" class="input" name="user_email1" size="20" style="width: 100px" required>@
-											<input type="text" class="input" name="user_email2" size="20" style="width: 100px" required>
+											<input type="text" class="input" name="user_email1" size="20" style="width: 100px" >@
+											<input type="text" class="input" name="user_email2" size="20" style="width: 100px" >
 											<select class="input" name="user_email3" style="width: 100px" onchange="selectemailchk()">
 												<option value="0">직접 입력</option>
 												<option value="naver.com">네이버</option>
