@@ -58,6 +58,11 @@
 </script>
 </head>
 <body>
+<!-- 헤더 시작 -->
+		<%@ include file="header.jsp" %>
+	<!-- 헤더 끝 -->
+	<section class="hero-section">
+<div align="center">
 <h1>펫 등록</h1>
 <table  width="500px" border="1">
 	<tr>
@@ -102,5 +107,10 @@
 </table>
 <button onclick="window.location='${path}/joinfin'">건너뛰기</button>
 <button onclick="window.location='${path}/joinfin'">다음</button>
+</div>
+</section>
+<!-- 푸터 시작 -->
+		<%@ include file="footer.jsp" %>
+	<!-- 푸터 끝 -->
 </body>
 </html>

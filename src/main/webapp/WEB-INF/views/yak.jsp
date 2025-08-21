@@ -8,6 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<!-- 헤더 시작 -->
+		<%@ include file="header.jsp" %>
+	<!-- 헤더 끝 -->
+
+	<section class="hero-section">
 <h1 align="center">약관</h1>
 <div align="center">
 	<table>
@@ -37,6 +42,12 @@
 		</tr>
 	</table>
 </div>
+<div align="center">
 <button onclick="window.location='${path}/join'">다음</button>
+</div>
+</section>
+<!-- 푸터 시작 -->
+		<%@ include file="footer.jsp" %>
+	<!-- 푸터 끝 -->
 </body>
 </html>

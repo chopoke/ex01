@@ -144,11 +144,4 @@ public class test_controller {
 		
 		return "board_detail2";
 	}
-	
-	@RequestMapping("mypage")
-	public String mypage() {
-		logger.info("=== url -> test1 ===");
-		
-		return "mypage";
-	}
 }

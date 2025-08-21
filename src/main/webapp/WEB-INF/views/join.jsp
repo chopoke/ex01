@@ -61,13 +61,18 @@
 </script>
 </head>
 <body>
+<!-- 헤더 시작 -->
+		<%@ include file="header.jsp" %>
+	<!-- 헤더 끝 -->
+
 	<div class="wrap">
 		<!-- 헤더 시작 -->
 		<%-- <%@ include file="../../common/header.jsp" %> --%> <!-- customer/webapp/common/header.jsp -->
 		<!-- 헤더 끝 -->
 		
 		<!-- 컨텐츠 시작 -->
-		<div id="container">
+		<section class="hero-section">
+		<div id="container" align="center">
 			<div id="contents">
 				<!-- 상단 중앙1 시작 -->
 				<div id="section1">
@@ -162,8 +167,11 @@
 				
 			</div>
 		</div>
+		</section>
 		<!-- 컨텐츠 끝 -->
-		
+		<!-- 푸터 시작 -->
+		<%@ include file="footer.jsp" %>
+	<!-- 푸터 끝 -->
 		<!-- 푸터 시작 -->
 		<%-- <%@ include file="../../common/footer.jsp" %> --%>
 		<!-- 푸터 끝 -->
