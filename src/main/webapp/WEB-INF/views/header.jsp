@@ -534,7 +534,7 @@ body {
 				<a href="#" class="nav-link" onclick="window.location='${path}/yak'">회원가입</a>
 				</c:if>
 				<c:if test="${!(empty sessionScope.sessionid)}">
-				<a href="#" class="nav-link" onclick="window.location='${path}/yak'">나의정보</a>
+				<a href="#" class="nav-link" onclick="window.location='${path}/mypage'">나의정보</a>
 				</c:if>
 				
 				<c:if test="${empty sessionScope.sessionid}">

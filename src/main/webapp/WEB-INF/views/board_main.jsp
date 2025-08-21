@@ -63,7 +63,7 @@
 		<!-- 컨텐츠 시작 -->
 		<section class="main-image-section" id="main-image-section" width="600px">
 		
-			<h1>상품 메인페이지</h1>
+			<h1>게시판 메인페이지</h1>
 	<table>
 		<tr>
 			<td><a href="${path}/board_detail"><img alt="" src="resources/게시판메인.png" width="1000px"></a></td>

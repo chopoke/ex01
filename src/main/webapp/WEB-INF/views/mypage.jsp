@@ -63,13 +63,12 @@
 		<!-- 컨텐츠 시작 -->
 		<section class="main-image-section" id="main-image-section" width="600px">
 		
-	<h1>상품 장바구니페이지</h1>
-<table>
-	<tr>
-		<td><a href="${path}/shop_pay"><img alt="" src="resources/상품장바구니.png" width="1000px"></a></td>
-	</tr>
-</table>
-
+			<h1>마이페이지</h1>
+	<table>
+		<tr>
+			<td><a href="${path}/shop_fin"><img alt="" src="resources/마이페이지.png" width="1000px"></a></td>
+		</tr>
+	</table>
 		
 		</section>
 		<!-- 컨텐츠 끝 -->

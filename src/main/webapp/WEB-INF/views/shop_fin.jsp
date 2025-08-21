@@ -63,7 +63,7 @@
 		<!-- 컨텐츠 시작 -->
 		<section class="main-image-section" id="main-image-section" width="600px">
 		
-			<h1>상품 메인페이지</h1>
+			<h1>상품 결제완료페이지</h1>
 	<table>
 		<tr>
 			<td><a href="${path}/shop_main"><img alt="" src="resources/결재완료.png" width="1000px"></a></td>
